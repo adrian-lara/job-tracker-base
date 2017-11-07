@@ -34,6 +34,12 @@ describe Tag do
 
         expect(actual).to eq(expected)
       end
+      it "returns 0 if there are no jobs with salary provided" do
+        expected = 0
+        actual = @tag_2.avg_salary
+
+        expect(actual).to eq(expected)
+      end
     end
 
   end

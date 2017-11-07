@@ -9,6 +9,8 @@ class Tag < ApplicationRecord
 
   def avg_salary
     jobs_with_salary = jobs.where.not(salary: nil).count
+    return 0 if jobs_with_salary == 0
+    
     jobs.total_salary / jobs_with_salary
   end
 
